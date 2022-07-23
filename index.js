@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 // routes
 const todoRoute = require('./routes/todo');
+const userRoute = require('./routes/user');
 
 dotenv.config();
 app.use(cors());
@@ -30,6 +31,7 @@ app.get('/', (_, res) => {
 
 // route
 app.use('/api/todo', todoRoute);
+app.use('/api/user', userRoute);
 
 // listen server
 app.listen(PORT, () => {
